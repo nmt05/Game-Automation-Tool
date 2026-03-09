@@ -1,40 +1,53 @@
 ## 🛠 Project Overview:
-High-Performance Automation: Hệ thống tự động hóa hiệu suất cao phát triển bằng Python, tập trung vào tương tác thông minh với thiết bị ngoại vi qua giao diện ADB.
 
-Real-time Optimization: Tích hợp kỹ thuật xử lý ảnh (OCR) và quản lý luồng sự kiện (Event Queue) để tối ưu hóa quá trình ra quyết định trong thời gian thực.
+▶ High-Performance Automation: Hệ thống tự động hóa hiệu suất cao phát triển bằng Python, tập trung vào tương tác thông minh qua giao diện ADB.
+
+▶ Real-time Optimization: Tích hợp kỹ thuật xử lý ảnh (OCR) và quản lý luồng sự kiện (Event Queue) để tối ưu hóa quyết định trong môi trường thời gian thực.
+
+▶ Code Security: Áp dụng các giải pháp bảo mật mã nguồn chuyên sâu để ngăn chặn dịch ngược và can thiệp trái phép.
 
 ## 🚀 Key Technical Features:
-ADB Port Integration: Thiết lập kết nối và điều khiển thiết bị ở mức thấp (low-level), tối ưu hóa tốc độ truyền nhận dữ liệu và mô phỏng chính xác các thao tác chạm.
 
-In-house Digits Reader: Tự phát triển module nhận diện chữ số tối ưu cho các font chữ đặc thù, giúp giảm độ trễ đáng kể so với các thư viện OCR tổng quát.
+▶ File-based Management System: Khả năng ghi/đọc file để lấy/cập nhật dữ liệu.
 
-Target Detection: Sử dụng thuật toán tự động quét và xác định mục tiêu trên màn hình dựa trên đặc điểm hình ảnh (Computer Vision).
+▶ Instant Telegram Notifications: Tích hợp Telegram Bot API để gửi thông báo trạng thái, báo lỗi hoặc kết quả thực thi theo thời gian thực về thiết bị cá nhân.
 
-Event-Driven Architecture: Mọi tương tác được đóng gói thành các Event riêng biệt.
+▶ Source Code Obfuscation (PyArmor): Sử dụng PyArmor để mã hóa mã nguồn Python, bảo vệ thuật toán core và ngăn chặn Reverse Engineering từ phía người dùng cuối.
 
-Sequential Queue Management: Áp dụng cấu trúc dữ liệu Queue để quản lý sự kiện theo cơ chế Blocking/Sequential, đảm bảo tính ổn định và tránh xung đột thao tác.
+▶ ADB Port Integration: Thiết lập kết nối và điều khiển thiết bị ở mức thấp (low-level), mô phỏng chính xác thao tác chạm/vuốt theo tọa độ.
 
-## 💻 Tech Stack:
-Language: Python.
+▶ In-house Digits Reader: Tự phát triển module nhận diện chữ số tối ưu cho font đặc thù, giảm độ trễ so với các thư viện OCR tổng quát.
 
-Communication: ADB (Android Debug Bridge).
+▶ Target Detection: Thuật toán tự động quét và xác định mục tiêu trên màn hình dựa trên đặc điểm hình ảnh (Computer Vision).
 
-Libraries: OpenCV (Image Processing), PyAutoGUI (optional), Logging.
+▶ Sequential Queue Management: Quản lý sự kiện theo cơ chế Blocking/Sequential bằng cấu trúc dữ liệu Queue, đảm bảo tính ổn định và tránh xung đột.
 
-Architecture: Event-driven, Queue-based.
+## ■ Tech Stack:
+
+▶ Language: Python.
+
+▶ Computer Vision & OCR: OpenCV, Tesseract OCR, Pillow.
+
+▶ Architecture: File-based System, Event-driven, Queue-based.
+
+▶ Security & Communication: PyArmor, Telegram Bot API, ADB Port.
+
+▶ Concurrency: Threading & Queue.
 
 ## 📖 How it Works:
-1. Sensing: Hệ thống chụp ảnh màn hình qua ADB và truyền dữ liệu vào module OCR/Digits Reader.
 
-2. Thinking: Dựa trên dữ liệu thu được, logic AI thực hiện tìm kiếm mục tiêu và ra quyết định hành động tiếp theo.
+1. ▶ Sensing: Hệ thống chụp ảnh màn hình qua ADB và truyền dữ liệu vào module OCR/Digits Reader.
 
-3. Planning: Các hành động đã quyết định được đưa vào Event Queue để sắp xếp thứ tự thực thi.
+2. ▶ Thinking: Logic AI thực hiện tìm kiếm mục tiêu và ra quyết định hành động dựa trên dữ liệu hình ảnh.
 
-4. Acting: Một Worker chuyên dụng sẽ lấy từng sự kiện từ hàng đợi để thực thi trực tiếp qua cổng ADB.
+3. ▶ Planning: Các hành động được đẩy vào Event Queue để sắp xếp thứ tự thực thi.
+
+4. ▶ Acting: Một Worker lấy từng sự kiện từ hàng đợi để thực thi trực tiếp qua cổng ADB.
+   
+5. ▶ Notification: Hệ thống tự động gửi báo cáo các sự kiện quan trọng qua Telegram.
 
 ## ⚠️ Disclaimer:
-Dự án được thực hiện hoàn toàn vì mục đích nghiên cứu kỹ thuật và giáo dục (Educational Purposes).
 
-Tác giả không chịu trách nhiệm cho bất kỳ hành vi sử dụng sai mục đích vi phạm điều khoản của bên thứ ba.
+▶ Educational Purposes: Dự án được thực hiện hoàn toàn vì mục đích nghiên cứu kỹ thuật.
 
-
+▶ Compliance: Tác giả không chịu trách nhiệm cho bất kỳ hành vi sử dụng sai mục đích vi phạm điều khoản của bên thứ ba.
