@@ -1,42 +1,40 @@
-Game Intelligence & Automation Research Tool
-📌 Overview
-Dự án này là một hệ thống tự động hóa hiệu suất cao được phát triển bằng Python, tập trung vào việc nghiên cứu khả năng tương tác thông minh giữa phần mềm và các thiết bị ngoại vi thông qua giao thức ADB. Hệ thống tích hợp các kỹ thuật xử lý ảnh (OCR) và quản lý luồng sự kiện (Event Queue) để tối ưu hóa quá trình ra quyết định trong môi trường thời gian thực.
+Dưới đây là dự án Game Intelligence & Automation Research Tool được trình bày theo đúng format bạn yêu cầu:
 
-🚀 Key Technical Features
-1. ADB Port Integration
-Sử dụng ADB (Android Debug Bridge) để thiết lập kết nối và điều khiển thiết bị ở mức thấp (low-level).
+## Project Overview:
+High-Performance Automation: Hệ thống tự động hóa hiệu suất cao phát triển bằng Python, tập trung vào tương tác thông minh với thiết bị ngoại vi qua giao diện ADB.
 
-Tối ưu hóa tốc độ truyền nhận dữ liệu và mô phỏng các thao tác chạm (tap/swipe) chính xác theo tọa độ.
+Real-time Optimization: Tích hợp kỹ thuật xử lý ảnh (OCR) và quản lý luồng sự kiện (Event Queue) để tối ưu hóa quá trình ra quyết định trong thời gian thực.
 
-2. Computer Vision & Custom OCR
-Digits Reader (In-house): Tự phát triển module nhận diện chữ số tối ưu cho các font chữ đặc thù, giúp giảm độ trễ so với các thư viện tổng quát.
+## 🚀 Key Technical Features:
+ADB Port Integration: Thiết lập kết nối và điều khiển thiết bị ở mức thấp (low-level), tối ưu hóa tốc độ truyền nhận dữ liệu và mô phỏng chính xác các thao tác chạm.
 
-OCR Engine: Trích xuất dữ liệu văn bản từ màn hình để làm đầu vào cho logic điều khiển.
+In-house Digits Reader: Tự phát triển module nhận diện chữ số tối ưu cho các font chữ đặc thù, giúp giảm độ trễ đáng kể so với các thư viện OCR tổng quát.
 
-Target Detection: Thuật toán tự động quét và xác định mục tiêu trên màn hình dựa trên đặc điểm hình ảnh.
+Target Detection: Sử dụng thuật toán tự động quét và xác định mục tiêu trên màn hình dựa trên đặc điểm hình ảnh (Computer Vision).
 
-3. Event-Driven Architecture & Queue Management
-Event System: Mọi tương tác được đóng gói thành các Event.
+Event-Driven Architecture: Mọi tương tác được đóng gói thành các Event riêng biệt.
 
-Sequential Queue: Áp dụng cấu trúc dữ liệu Queue để quản lý các sự kiện. Mỗi sự kiện chỉ được thực thi sau khi sự kiện trước đó hoàn thành (Blocking/Sequential execution), đảm bảo tính ổn định của luồng logic và tránh xung đột thao tác.
+Sequential Queue Management: Áp dụng cấu trúc dữ liệu Queue để quản lý sự kiện theo cơ chế Blocking/Sequential, đảm bảo tính ổn định và tránh xung đột thao tác.
 
-🛠 Tech Stack
-Language: Python
+## Tech Stack:
+Language: Python.
 
-Communication: ADB
+Communication: ADB (Android Debug Bridge).
 
-Libraries: OpenCV (Image Processing), PyAutoGUI (nếu có), Logging.
+Libraries: OpenCV (Image Processing), PyAutoGUI (optional), Logging.
 
 Architecture: Event-driven, Queue-based.
 
-📖 How it Works
-Sensing: Hệ thống chụp ảnh màn hình qua ADB và đưa vào module OCR/Digits Reader.
+## How it Works:
+1. Sensing: Hệ thống chụp ảnh màn hình qua ADB và truyền dữ liệu vào module OCR/Digits Reader.
 
-Thinking: Dựa trên dữ liệu thu được, logic AI sẽ tìm kiếm mục tiêu và quyết định hành động tiếp theo.
+2. Thinking: Dựa trên dữ liệu thu được, logic AI thực hiện tìm kiếm mục tiêu và ra quyết định hành động tiếp theo.
 
-Planning: Các hành động được đưa vào Event Queue.
+3. Planning: Các hành động đã quyết định được đưa vào Event Queue để sắp xếp thứ tự thực thi.
 
-Acting: Worker sẽ lấy từng event từ Queue để thực thi qua cổng ADB.
+4. Acting: Một Worker chuyên dụng sẽ lấy từng sự kiện từ hàng đợi để thực thi trực tiếp qua cổng ADB.
 
-⚠️ Disclaimer
-Dự án này được thực hiện hoàn toàn vì mục đích nghiên cứu kỹ thuật (Educational Purposes). Tác giả không chịu trách nhiệm cho bất kỳ hành vi sử dụng sai mục đích nào vi phạm điều khoản của bên thứ ba.
+## ⚠️ Disclaimer:
+Dự án được thực hiện hoàn toàn vì mục đích nghiên cứu kỹ thuật và giáo dục (Educational Purposes).
+
+Tác giả không chịu trách nhiệm cho bất kỳ hành vi sử dụng sai mục đích vi phạm điều khoản của bên thứ ba.
