@@ -1,0 +1,10 @@
+{
+  "port": "5555",
+  "min_hp": 3710,
+  "min_min_hp": 3710,
+  "min_atk": 452,
+  "min_min_atk": 452,
+  "min_speed": 151,
+  "hp_gap": 0,
+  "atk_gap": 0
+}

@@ -1,0 +1,16 @@
+# Build folders
+dist/
+build/
+bin/
+obj/
+
+# Executables and archives
+*.exe
+*.zip
+*.pkg
+*.dll
+
+# Visual Studio files (nếu bạn dùng VS)
+.vs/
+*.user
+*.suo

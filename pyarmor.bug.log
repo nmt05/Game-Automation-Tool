@@ -1,0 +1,47 @@
+[BUG]: invalid syntax (<frozen ..eggtool>, line 1001)
+
+## Command Line
+C:\Users\PC\AppData\Local\Programs\Python\Python313\Scripts\pyarmor gen -O obf -r .
+
+## Environments
+Python 3.13.2
+Pyarmor 9.2.0 (trial), 000000, non-profits
+Platform windows.x86_64
+Native windows.amd64
+Home C:\Users\PC\.pyarmor
+
+## Traceback
+Traceback (most recent call last):
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\__main__.py", line 793, in main
+    main_entry(sys.argv[1:])
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\__main__.py", line 786, in main_entry
+    return args.func(ctx, args)
+           ~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\__main__.py", line 248, in cmd_gen
+    builder.process(options)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\generate.py", line 188, in process
+    self._obfuscate_scripts()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\generate.py", line 144, in _obfuscate_scripts
+    code = Pytransform3.generate_obfuscated_script(self.ctx, r)
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\core\__init__.py", line 95, in generate_obfuscated_script
+    return m.generate_obfuscated_script(ctx, res)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<maker>", line 727, in generate_obfuscated_script
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\__init__.py", line 16, in process
+    return meth(self, res, *args, **kwargs)
+  File "<maker>", line 521, in process
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarmor\cli\resource.py", line 144, in reparse
+    self.mtree = ast.parse(''.join(lines), self.frozenname, 'exec')
+                 ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\ast.py", line 54, in parse
+    return compile(source, filename, mode, flags,
+                   _feature_version=feature_version, optimize=optimize)
+  File "<frozen ..eggtool>", line 1001
+    if (hp_gap_i > 0 and hp_gap_i <= 60 and):
+                                           ^
+SyntaxError: invalid syntax
+
+

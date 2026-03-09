@@ -1,0 +1,8 @@
+[builder]
+obf-code = 3
+obf-module = 2
+wrap-mode = 1
+restrict = 1
+enable_suffix = 0
+manifest = include eggtool.py;include hunttool.py;include license.py;include Numread.py;include *.py
+
